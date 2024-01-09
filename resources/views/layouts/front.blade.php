@@ -16,16 +16,50 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css2/style.css') }}" rel="stylesheet">
+
     @yield('scripts')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('style')
+
+
+
+    <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+
 </head>
 <body class="font-sans antialiased">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-4">
-        <div class="container">
-            <a class="navbar-brand font-weight-bold text-dark" href="/">DEFARSCI FORM</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-1">
+       
+        <div class="logo_def">
+        <a href="index.php">
+            <img src="images/defarsci.png" alt="">
+         
+        </a><span>DEFARSCI</span>
+        </div>
+            <!-- <img src="images/defarsci.png" alt="">
+            <a class="navbar-brand font-weight-bold text-dark" href="/">DEFARSCI FORM</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -46,7 +80,7 @@
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button type="submit" class="btn btn-primary">Déconnecté</button>
+                                <button type="submit" class="btn deconnect ">Déconnecté</button>
                             </form>
                         </li>
                     @else
@@ -68,5 +102,22 @@
     <!-- Bootstrap JS, jQuery, Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .logo_def{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:100px;
+    }
+    .logo_def img{
+        width: 10vh;
+        
+        }
+        .deconnect{
+            background-color:#f55a2b;
+        }
+    </style>
 </body>
 </html>
