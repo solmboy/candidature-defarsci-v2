@@ -1,22 +1,23 @@
-<x-guest-layout>
+@extends('layouts.front')
+<br><br><br><br>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
+<section class="login">
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <label for="email" :value="__('Email')">Email</label><br>
+            <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+            <label for="password" :value="__('Password')" >Password</label><br>
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <input id="password" class="block mt-1 w-full"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
@@ -39,9 +40,21 @@
                 </a>
             @endif
 
-            <x-primary-button class="ms-3">
+            <button  class="btn ms-3">
                 {{ __('Log in') }}
-            </x-primary-button>
+            </button>
         </div>
     </form>
-</x-guest-layout>
+    
+</section>
+<style>
+    .login{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+    }
+    button{
+        background-color:#f55a2b;
+    }
+</style>

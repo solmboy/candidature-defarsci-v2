@@ -1,7 +1,4 @@
 @extends('layouts.front')
-
-
-
 @section('content')
 
 <div class="conatiner">
@@ -15,20 +12,18 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="images/backgrounda.png" >
+                <img src="images/defarsci1.jpg" >
                 </div>
                 <div class="carousel-item">
-                    <div class="maincontainer">
-                        <div class="textcontainer">
-                            <p class="textslider">Lorem ipsum dolor sit amet consectetur adipisi
-                            cing elit. Voluptas in rerum soluta aliquid quos
-                            magnam deserunt autem at laudantium eius rem 
-                            reiciendis expedita aliquam labore corrupti facilis magni, sit vel!</p>
-                        </div>
-                        <!-- <div class="buttoncontainer">
-                            <a href="">POSTULER MAINTENANT</a>
-                        </div> -->
-                    </div>       
+                <img src="images/defarsci2.jpg" >
+                </div>
+
+                <div class="carousel-item">
+                <img src="images/defarsci.jpg" >
+                </div>
+
+                <div class="carousel-item">
+                <img src="images/stage.jpg" >
                 </div>
             </div>
         </div>

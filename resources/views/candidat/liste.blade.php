@@ -62,4 +62,9 @@
         </div>
     </div>
 </div>
+<style>
+    .badge{
+        background-color:#f55a2b;
+    }
+</style>
 @endsection
